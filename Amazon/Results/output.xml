@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.5.2 on linux)" generated="20190909 10:29:51.494" rpa="false">
+<suite id="s1" name="Amazon" source="/media/conor/mainHD/development/robot-scripts/Amazon/Tests/Amazon.robot">
+<test id="s1-t1" name="User must sign in to check out">
+<kw library="Common" type="setup" name="Begin Web Test">
+<kw library="SeleniumLibrary" name="Open Browser">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>ff</arg>
+</arguments>
+<msg level="INFO" timestamp="20190909 10:29:51.695">Opening browser 'ff' to base url 'about:blank'.</msg>
+<status starttime="20190909 10:29:51.695" status="PASS" endtime="20190909 10:29:54.693"></status>
+</kw>
+<status starttime="20190909 10:29:51.694" status="PASS" endtime="20190909 10:29:54.693"></status>
+</kw>
+<kw library="AmazonApp" name="Search for Products">
+<kw library="SeleniumLibrary" name="Go To">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.amazon.com</arg>
+</arguments>
+<msg level="INFO" timestamp="20190909 10:29:54.694">Opening url 'https://www.amazon.com'</msg>
+<status starttime="20190909 10:29:54.694" status="PASS" endtime="20190909 10:29:57.748"></status>
+</kw>
+<kw library="SeleniumLibrary" name="Wait Until Page Contains">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Your Amazon.com</arg>
+</arguments>
+<kw library="SeleniumLibrary" name="Capture Page Screenshot">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg level="INFO" html="yes" timestamp="20190909 10:30:02.950">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status starttime="20190909 10:30:02.823" status="PASS" endtime="20190909 10:30:02.950"></status>
+</kw>
+<msg level="FAIL" timestamp="20190909 10:30:02.952">Text 'Your Amazon.com' did not appear in 5 seconds.</msg>
+<status starttime="20190909 10:29:57.748" status="FAIL" endtime="20190909 10:30:02.952"></status>
+</kw>
+<status starttime="20190909 10:29:54.693" status="FAIL" endtime="20190909 10:30:02.952"></status>
+</kw>
+<kw library="Common" type="teardown" name="End Web Test">
+<kw library="SeleniumLibrary" name="Close Browser">
+<doc>Closes the current browser.</doc>
+<status starttime="20190909 10:30:02.953" status="PASS" endtime="20190909 10:30:04.734"></status>
+</kw>
+<status starttime="20190909 10:30:02.952" status="PASS" endtime="20190909 10:30:04.734"></status>
+</kw>
+<doc>This is some basic info about the test</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status critical="yes" starttime="20190909 10:29:51.694" status="FAIL" endtime="20190909 10:30:04.735">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
+</test>
+<doc>This is some basic info avout the whole suite</doc>
+<status starttime="20190909 10:29:51.494" status="FAIL" endtime="20190909 10:30:04.737"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">Smoke</stat>
+</tag>
+<suite>
+<stat fail="1" name="Amazon" pass="0" id="s1">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
