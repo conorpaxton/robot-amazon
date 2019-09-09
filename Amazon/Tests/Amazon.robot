@@ -18,9 +18,9 @@ User must sign in to check out
 
 
     AmazonApp.Search for Products
-    AmazonApp.Select Product from Search Results
-    AmazonApp.Add product to cart
-    AmazonApp.Begin Checkout
+    
+    
+    
 
 
 
